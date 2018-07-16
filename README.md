@@ -1,0 +1,2 @@
+# clarifaiChallenge
+assignment of clarifai
