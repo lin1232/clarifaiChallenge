@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{{.Title}}</title>
+	</head>
+	<body>
+		<img src="./logo.png" width="489" height="103">
+		<form action="http://127.0.0.1:8080/webpage" method="post">
+			Please input tag names
+			<input type="text" name="key_word">
+			<input type="submit" value="Search">
+			If you input more than one tag, plase connect every tag with &
+		</form>
+        {{range $index, $element := .Result}}
+    		<a href={{ $element.Key }}> {{ $element.Key }}</a>   the probability is {{$element.Value}}
+    		<br>
+		{{ end }}
+	</body>
+</html>
